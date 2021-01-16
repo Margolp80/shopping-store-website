@@ -1,0 +1,32 @@
+<form #loginForm="ngForm" class="box" (ngSubmit)="onSubmit(loginForm)">
+  <p style="color: cornsilk">You must be signed in to add</p>
+  <p style="color: cornsilk">or view products from the cart</p>
+  <h1>Log In</h1>
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Email  (example@gmail.com)"
+    ngModel
+    email
+    required
+  />
+
+  <input
+    id="password"
+    type="password"
+    name="password"
+    placeholder="Password"
+    ngModel
+    minlength="6"
+    required
+  />
+  <div>
+    <app-spinner *ngIf="infoLoading"></app-spinner>
+  </div>
+  <div *ngIf="loginIsInvalid" class="alert alert-danger">
+    sorry! but your password or email are invalid
+  </div>
+  <button type="submit" name="" [disabled]="!loginForm.valid">Log In</button>
+  <a routerLink="/authentication">not signed in yet? create an account</a>
+</form>

@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
+.nav-item {
+  font-family: "Poppins", sans-serif;
+  border-bottom: 1px solid rgba(170, 143, 143, 0.753);
+  margin-left: 5px;
+}
+.all {
+  height: 60px;
+}

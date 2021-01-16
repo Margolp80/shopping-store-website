@@ -1,0 +1,52 @@
+<div class="all-page">
+  <div class="picture"><img src="{{ cardDetail.img }}" alt="" /></div>
+  <div class="information">
+    <h1 class="title">{{ cardDetail.title }}</h1>
+    <p class="stars">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span style="margin-left: 5px">1213 ratings</span>
+    </p>
+    <hr />
+    <p class="price">
+      <span style="font-weight: bold">Price:</span> {{ cardDetail.price }} $
+      without shipping
+    </p>
+    <hr />
+    <br />
+
+    <div class="about">
+      <h1>about this item:</h1>
+      <ul>
+        <li>All fruits are very fresh</li>
+        <li>plenty left in stock</li>
+        <li>Super kosher, even kesher enough for you..</li>
+      </ul>
+    </div>
+  </div>
+  <div class="options">
+    <div class="card bg-secondary text-white">
+      <div class="card-body">
+        <h1 style="text-align: center">{{ cardDetail.price }}$</h1>
+        <p style="font-weight: bold">{{ cardDetail.content }}</p>
+        <button
+          (click)="openDialog(cardDetail)"
+          type="button"
+          class="btn btn-primary btn-block"
+        >
+          Buy it now!
+        </button>
+        <button
+          type="button"
+          class="btn btn-info btn-block"
+          (click)="addToCart(cardDetail)"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+.example-card {
+  min-width: 30%;
+  background-color: rgba(228, 207, 207, 0.685);
+  min-height: 410px;
+}
+
+.example-header-image {
+  background-image: url("https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-size: cover;
+}

@@ -1,0 +1,39 @@
+<form class="box" #authform="ngForm" (ngSubmit)="onSubmit(authform)">
+  <h1>Register</h1>
+  <input type="text" name="username" placeholder="User Name" ngModel />
+
+  <input
+    type="email"
+    placeholder="Email  (example@gmail.com)"
+    ngModel
+    name="email"
+    required
+    email
+  />
+  <div style="color: rgb(202, 183, 183)">
+    a password must contain 6 charechters
+  </div>
+  <input
+    type="password"
+    placeholder="Password"
+    ngModel
+    name="password"
+    id="password"
+    required
+    minlength="6"
+  />
+
+  <div *ngIf="loginIsinValid" class="alert alert-danger">
+    sorry! but your password or email are invalid
+  </div>
+  <input class="w3-check" type="checkbox" checked="checked" />
+  <label style="color: aliceblue"><a href="">I agree to the terms</a> </label>
+  <div>
+    <app-spinner *ngIf="infoLoading == true"></app-spinner>
+  </div>
+  <button type="submit" name="" [disabled]="!authform.valid">
+    Sign Up For Free
+  </button>
+
+  <a routerLink="/login">alredy signed in? log in here</a>
+</form>

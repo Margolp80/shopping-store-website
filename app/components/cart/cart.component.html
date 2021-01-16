@@ -1,0 +1,26 @@
+<div
+  *ngIf="isLogedIn"
+  class="cart-total shadow-lg p-3 mb-5 bg-warning rounded"
+  style="width: 50%; margin: auto;"
+>
+  <div class="coast text-dark" style="margin-top: 3vh;">
+    <h1 style="text-align: center;">total coast:{{ cartTotalCoast }} $</h1>
+  </div>
+  <div class="button">
+    <button mat-raised-button color="warn" style="justify-content: center;">
+      Buy all cart
+    </button>
+  </div>
+</div>
+<div class="all-cart" style="margin-bottom: 200px;">
+  <div style="display: flex; flex-wrap: wrap; margin-bottom: 50px;">
+    <app-card
+      style="max-width: 33%;"
+      *ngFor="let card of cards$"
+      [cardsInformation]="card"
+      [isCart]="false"
+      (removeClicked)="deleteOneCard($event)"
+    ></app-card>
+  </div>
+</div>
+<div>|</div>
